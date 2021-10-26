@@ -1,0 +1,24 @@
+VAR
+    w : INTEGER := 0;
+    v : INTEGER := 0;
+    l : INTEGER := 0;
+    i : INTEGER ;
+BEGIN
+WHILE (str[i]=/= ".") DO
+    i=i+1 ;
+    l:=i ;
+END_WHILE 
+FOR i FROM 0 TO l STEP 1  DO
+    IF str[i] in ("a","e","i","o","u","A","E","I","O","U") THEN
+        v:=v+1;
+    END_IF
+END_FOR 
+FOR i FROM 0 TO l STEP 1  DO
+    IF str[i] :=" " THEN
+        w:=w+1;
+    END_IF
+END_FOR  
+write ( 'nbr of vowels' , v ) ;
+write ( 'length' , l ) ;
+write ( 'nbr of words' , w ) ;
+END
